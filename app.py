@@ -1,3 +1,5 @@
+import os
+import traceback
 from flask import Flask, render_template, session, redirect, url_for
 from flask_script import Manager
 from flask_bootstrap import Bootstrap
@@ -5,7 +7,7 @@ from flask_moment import Moment
 from flask_wtf import Form
 from wtforms import FloatField, SubmitField
 from wtforms.validators import InputRequired, DataRequired
-import traceback
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'hard to guess string'
